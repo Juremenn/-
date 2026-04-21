@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
           musicText.textContent = "Loading...";
 
           if (!audioBuffer) {
-            const response = await fetch('./src/music.mp3');
+            const response = await fetch('/music.mp3');
             const arrayBuffer = await response.arrayBuffer();
             audioBuffer = await audioCtx.decodeAudioData(arrayBuffer);
           }
