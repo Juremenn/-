@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const typedElement = document.querySelector('.typed-text');
   if (typedElement && window.Typed) {
     window.typedInstance = new window.Typed('.typed-text', {
-      strings: ['Pentester', 'Etical Hacker', 'Analytical', 'Problem Solver'],
+      strings: ['a Pentester', 'an Etical Hacker', 'an Analytical', 'a Problem Solver'],
       typeSpeed: 50,
       backSpeed: 30,
       backDelay: 2000,
@@ -255,6 +255,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!audioCtx) {
         audioCtx = new (window.AudioContext || window.webkitAudioContext)();
       }
+      
+      // Critical for mobile (iOS/Android): Unlock the AudioContext immediately!
+      if (audioCtx.state === 'suspended') {
+        await audioCtx.resume();
+      }
 
       if (isPlaying) {
         // Stop music
@@ -274,7 +279,10 @@ document.addEventListener('DOMContentLoaded', () => {
           if (!audioBuffer) {
             const response = await fetch('/music.mp3');
             const arrayBuffer = await response.arrayBuffer();
-            audioBuffer = await audioCtx.decodeAudioData(arrayBuffer);
+            // Safari compatibility for decodeAudioData
+            audioBuffer = await new Promise((resolve, reject) => {
+              audioCtx.decodeAudioData(arrayBuffer, resolve, reject);
+            });
           }
 
           sourceNode = audioCtx.createBufferSource();
