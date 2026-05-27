@@ -210,31 +210,55 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalImg = document.getElementById("modal-img");
   const captionText = document.getElementById("modal-caption");
   const closeBtn = document.querySelector(".close-modal");
+  const imgWrapper = modal?.querySelector(".modal-img-wrapper");
+
+  function openModal(src, alt) {
+    modal.style.display = "flex";
+    modalImg.src = src;
+    captionText.textContent = alt;
+
+    // Re-trigger shimmer on ::after by toggling class
+    if (imgWrapper) {
+      imgWrapper.classList.remove('shimmer-active');
+      void imgWrapper.offsetWidth; // force reflow
+      imgWrapper.classList.add('shimmer-active');
+    }
+
+    requestAnimationFrame(() => {
+      modal.classList.remove('modal-closing');
+      modal.classList.add('modal-open');
+    });
+  }
+
+  function closeModal() {
+    modal.classList.remove('modal-open');
+    modal.classList.add('modal-closing');
+    setTimeout(() => {
+      modal.style.display = "none";
+      modal.classList.remove('modal-closing');
+    }, 380);
+  }
 
   document.querySelectorAll('.cert-card img').forEach(img => {
-    // Prevent right-click and dragging
     img.addEventListener('contextmenu', e => e.preventDefault());
     img.setAttribute('draggable', 'false');
-
-    // Open modal on click
     img.addEventListener('click', function() {
-      modal.style.display = "flex";
-      modalImg.src = this.src;
-      captionText.innerHTML = this.alt;
+      openModal(this.src, this.alt);
     });
   });
 
   if (closeBtn) {
-    closeBtn.addEventListener('click', () => {
-      modal.style.display = "none";
-    });
+    closeBtn.addEventListener('click', closeModal);
   }
 
   // Close on outside click
   window.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
+    if (e.target === modal) closeModal();
+  });
+
+  // Close on Escape key
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
   });
 
   // 6. Web Audio API Music Player (Bypass IDM/Downloaders)

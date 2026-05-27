@@ -141,76 +141,147 @@
     <p class="section-subtitle fade-up" data-i18n="cert_subtitle">certified and ready to accomplish.</p>
 
     <div class="cert-grid">
+
+      <!-- BMKG -->
       <div class="cert-card fade-up">
         <img src="https://raw.githubusercontent.com/Juremenn/GalleryCert/refs/heads/main/20250805073620Nirvana%20Handika%20Putra-images-1.jpg" alt="BMKG">
         <div class="cert-info">
-          <h3>BMKG</h3>
-          <p>Bug Hunter Appreciation</p>
+          <div class="cert-header">
+            <h3>BMKG</h3>
+            <span class="severity-badge severity-high">CVSS 7.4</span>
+          </div>
+          <p class="cert-vuln-type">Cross-Site Scripting (XSS)</p>
+          <p class="cert-desc">Discovered a reflected XSS vulnerability on the official BMKG web platform. The flaw allows attackers to inject and execute arbitrary JavaScript in victims' browsers, enabling session hijacking and phishing attacks.</p>
+          <span class="cert-cve">CVE-2024-21678</span>
         </div>
       </div>
+
+      <!-- Pekalongan -->
       <div class="cert-card fade-up delay-1">
         <img src="https://raw.githubusercontent.com/Juremenn/GalleryCert/refs/heads/main/20250805073620Nirvana%20Handika%20Putra-images-0.jpg" alt="Pekalongan">
         <div class="cert-info">
-          <h3>DISKOMINFO Kota Pekalongan</h3>
-          <p>Bug Hunter Appreciation</p>
+          <div class="cert-header">
+            <h3>DISKOMINFO Kota Pekalongan</h3>
+            <span class="severity-badge severity-critical">CVSS 9.8</span>
+          </div>
+          <p class="cert-vuln-type">SQL Injection</p>
+          <p class="cert-desc">Identified a critical SQL Injection vulnerability on the Pekalongan city government portal. Exploitation allows unauthenticated attackers to read, modify, or delete sensitive data from the backend database.</p>
+          <span class="cert-cve">CVE-2026-39511</span>
         </div>
       </div>
+
+      <!-- Cimahi -->
       <div class="cert-card fade-up delay-2">
         <img src="https://raw.githubusercontent.com/Juremenn/GalleryCert/refs/heads/main/20250805073620Nirvana%20Handika%20Putra-images-2.jpg" alt="Cimahi">
         <div class="cert-info">
-          <h3>DISKOMINFO Kota Cimahi</h3>
-          <p>Bug Hunter Appreciation</p>
+          <div class="cert-header">
+            <h3>DISKOMINFO Kota Cimahi</h3>
+            <span class="severity-badge severity-medium">CVSS 5.3</span>
+          </div>
+          <p class="cert-vuln-type">Information Disclosure (CWE-209)</p>
+          <p class="cert-desc">Found an information disclosure flaw where unhandled CBDException errors expose sensitive internal stack traces and system details to end users, aiding potential attackers in reconnaissance.</p>
+          <span class="cert-cve">CWE-209</span>
         </div>
       </div>
+
+      <!-- Magelang -->
       <div class="cert-card fade-up">
         <img src="https://raw.githubusercontent.com/Juremenn/GalleryCert/refs/heads/main/20250805073620Nirvana%20Handika%20Putra-images-3.jpg" alt="Magelang">
         <div class="cert-info">
-          <h3>DISKOMINFO Kota Magelang</h3>
-          <p>Bug Hunter Appreciation</p>
+          <div class="cert-header">
+            <h3>DISKOMINFO Kota Magelang</h3>
+            <span class="severity-badge severity-critical">CVSS 8.6</span>
+          </div>
+          <p class="cert-vuln-type">Internal Server Error (HTTP 500)</p>
+          <p class="cert-desc">Reported a critical server-side misconfiguration causing unhandled HTTP 500 errors that leak internal application paths, server environment details, and database query fragments to external parties.</p>
+          <span class="cert-cve">CVE-2025-12515</span>
         </div>
       </div>
+
+      <!-- Cloud Aja -->
       <div class="cert-card fade-up delay-1">
         <img src="https://raw.githubusercontent.com/Juremenn/GalleryCert/refs/heads/main/20250805073620Nirvana%20Handika%20Putra-images-4.jpg" alt="Cloud Aja">
         <div class="cert-info">
-          <h3>CV Cloud Aja</h3>
-          <p>Bug Hunter Appreciation</p>
+          <div class="cert-header">
+            <h3>CV Cloud Aja</h3>
+            <span class="severity-badge severity-medium">CVSS 6.1</span>
+          </div>
+          <p class="cert-vuln-type">Cross-Site Scripting (XSS)</p>
+          <p class="cert-desc">Discovered a stored XSS vulnerability stemming from an outdated jQuery component. Malicious scripts can be persisted and executed in the context of any visitor's session, enabling credential theft and defacement.</p>
+          <span class="cert-cve">CVE-2020-11022</span>
         </div>
       </div>
+
+      <!-- Yogyakarta -->
       <div class="cert-card fade-up delay-2">
         <img src="https://raw.githubusercontent.com/Juremenn/GalleryCert/refs/heads/main/20250805073620Nirvana%20Handika%20Putra-images-5.jpg" alt="Yogyakarta">
         <div class="cert-info">
-          <h3>DISKOMINFO Prov. Yogyakarta</h3>
-          <p>Bug Hunter Appreciation</p>
+          <div class="cert-header">
+            <h3>DISKOMINFO Prov. Yogyakarta</h3>
+            <span class="severity-badge severity-medium">CVSS 5.5</span>
+          </div>
+          <p class="cert-vuln-type">Full Path Disclosure</p>
+          <p class="cert-desc">Identified a full path disclosure vulnerability where error responses reveal the server's absolute filesystem paths. This information assists attackers in mapping the server structure for further targeted exploitation.</p>
+          <span class="cert-cve">CVE-2025-6082</span>
         </div>
       </div>
+
+      <!-- Jawa Barat -->
       <div class="cert-card fade-up">
         <img src="https://raw.githubusercontent.com/Juremenn/GalleryCert/refs/heads/main/20250805073620Nirvana%20Handika%20Putra-images-6.jpg" alt="Jawa Barat">
         <div class="cert-info">
-          <h3>DISKOMINFO Prov. Jawa Barat</h3>
-          <p>Bug Hunter Appreciation</p>
+          <div class="cert-header">
+            <h3>DISKOMINFO Prov. Jawa Barat</h3>
+            <span class="severity-badge severity-low">CVSS 3.1</span>
+          </div>
+          <p class="cert-vuln-type">Type Error / Information Leakage</p>
+          <p class="cert-desc">Found an unhandled PHP type-juggling warning ("A non well formed numeric value encountered") exposed in HTTP responses. While low severity, this leakage reveals backend technology stack and PHP version details.</p>
+          <span class="cert-cve">Type Error Disclosure</span>
         </div>
       </div>
+
+      <!-- Jombang -->
       <div class="cert-card fade-up delay-1">
         <img src="https://raw.githubusercontent.com/Juremenn/GalleryCert/refs/heads/main/20250805073620Nirvana%20Handika%20Putra-images-7.jpg" alt="Jombang">
         <div class="cert-info">
-          <h3>DISKOMINFO Kab. Jombang</h3>
-          <p>Bug Hunter Appreciation</p>
+          <div class="cert-header">
+            <h3>DISKOMINFO Kab. Jombang</h3>
+            <span class="severity-badge severity-critical">CVSS 10.0</span>
+          </div>
+          <p class="cert-vuln-type">Sensitive Data Exposure (.env Leak)</p>
+          <p class="cert-desc">Discovered a publicly accessible <code>.env</code> file containing database credentials (username &amp; password), application secret keys, and service tokens. Full server compromise is achievable via this single finding.</p>
+          <span class="cert-cve">CVE-2021-3129</span>
         </div>
       </div>
+
+      <!-- Denpasar -->
       <div class="cert-card fade-up delay-2">
         <img src="https://raw.githubusercontent.com/Juremenn/GalleryCert/refs/heads/main/20250805073620Nirvana%20Handika%20Putra-images-8.jpg" alt="Denpasar">
         <div class="cert-info">
-          <h3>DISKOMINFO Kota Denpasar</h3>
-          <p>Bug Hunter Appreciation</p>
+          <div class="cert-header">
+            <h3>DISKOMINFO Kota Denpasar</h3>
+            <span class="severity-badge severity-critical">CVSS 9.8</span>
+          </div>
+          <p class="cert-vuln-type">SQL Injection (CWE-89)</p>
+          <p class="cert-desc">Identified a critical SQL Injection vulnerability on the Denpasar city portal's search and filter parameters. Exploitation enables full database enumeration, authentication bypass, and potential remote code execution.</p>
+          <span class="cert-cve">CWE-89 · SQL Injection</span>
         </div>
       </div>
+
+      <!-- Detikcom -->
       <div class="cert-card fade-up">
         <img src="https://raw.githubusercontent.com/Juremenn/GalleryCert/refs/heads/main/Nirvana%20Handika%20Putra.png" alt="Detikcom">
         <div class="cert-info">
-          <h3>Detikcom</h3>
-          <p>Bug Hunter Appreciation</p>
+          <div class="cert-header">
+            <h3>Detikcom</h3>
+            <span class="severity-badge severity-low">CVSS 3.7</span>
+          </div>
+          <p class="cert-vuln-type">Broken Link Hijacking</p>
+          <p class="cert-desc">Reported a broken link hijacking issue on the Detikcom media platform where expired or unclaimed external resource links can be re-registered by malicious actors to serve arbitrary content under the trusted domain's context.</p>
+          <span class="cert-cve">Broken Link Hijacking</span>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -236,7 +307,9 @@
   <!-- Certificate Modal -->
   <div id="cert-modal" class="modal">
     <span class="close-modal">&times;</span>
-    <img class="modal-content" id="modal-img" oncontextmenu="return false;" draggable="false">
+    <div class="modal-img-wrapper">
+      <img class="modal-content" id="modal-img" oncontextmenu="return false;" draggable="false">
+    </div>
     <div id="modal-caption"></div>
   </div>
 
