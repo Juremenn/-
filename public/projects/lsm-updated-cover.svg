@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="LSM Updated cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b0b0b" />
+      <stop offset="45%" stop-color="#3a1212" />
+      <stop offset="100%" stop-color="#120707" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffd36a" />
+      <stop offset="100%" stop-color="#ff8b3d" />
+    </linearGradient>
+    <radialGradient id="spot" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#ffd36a" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#ffd36a" stop-opacity="0" />
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <rect width="1200" height="720" fill="url(#bg)" />
+  <circle cx="320" cy="180" r="220" fill="url(#spot)" />
+  <circle cx="1020" cy="580" r="260" fill="#ff8b3d" opacity="0.08" />
+  <path d="M0 560 C180 500, 300 520, 460 570 S760 670, 930 610 S1100 510, 1200 550 L1200 720 L0 720 Z" fill="#210909" opacity="0.92" />
+
+  <g opacity="0.22" stroke="#ffe9b8" stroke-width="2">
+    <path d="M90 118 H290" />
+    <path d="M950 116 H1110" />
+    <path d="M120 640 H330" />
+    <path d="M800 625 H1110" />
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="110" y="110" width="980" height="500" rx="42" fill="#2b1111" stroke="rgba(255,255,255,0.08)" />
+    <rect x="145" y="145" width="520" height="430" rx="30" fill="#351414" stroke="rgba(255,211,106,0.2)" />
+    <rect x="705" y="145" width="350" height="430" rx="30" fill="#1d0d0d" stroke="rgba(255,139,61,0.2)" />
+
+    <circle cx="300" cy="270" r="82" fill="url(#gold)" opacity="0.16" />
+    <path d="M245 322 L300 190 L355 322 Z" fill="url(#gold)" opacity="0.95" />
+    <rect x="278" y="324" width="44" height="52" rx="10" fill="#ffd36a" opacity="0.9" />
+    <rect x="232" y="386" width="136" height="20" rx="10" fill="#ff8b3d" opacity="0.85" />
+    <rect x="210" y="420" width="182" height="14" rx="7" fill="#ffffff" opacity="0.12" />
+
+    <text x="455" y="235" fill="#fff1cf" font-family="Verdana, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="4">LSM UPDATED</text>
+    <text x="455" y="275" fill="#ffd36a" font-family="Verdana, Arial, sans-serif" font-size="18" font-weight="600" letter-spacing="3">WEB LOMBA • TEAM OF 3</text>
+    <rect x="455" y="320" width="250" height="18" rx="9" fill="#ff8b3d" opacity="0.75" />
+    <rect x="455" y="355" width="280" height="10" rx="5" fill="#ffffff" opacity="0.14" />
+    <rect x="455" y="380" width="220" height="10" rx="5" fill="#ffffff" opacity="0.12" />
+    <rect x="455" y="405" width="300" height="10" rx="5" fill="#ffffff" opacity="0.12" />
+
+    <g stroke="url(#gold)" stroke-width="4" fill="none" opacity="0.95">
+      <path d="M760 220 h150 v130 h-150 z" />
+      <path d="M780 240 h110" />
+      <path d="M780 270 h110" />
+      <path d="M780 300 h84" />
+    </g>
+    <path d="M815 390 L860 342 L903 390" stroke="#ffd36a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9" />
+    <path d="M860 342 V438" stroke="#ff8b3d" stroke-width="6" stroke-linecap="round" opacity="0.45" />
+
+    <g fill="#ffd36a" opacity="0.85">
+      <circle cx="915" cy="214" r="5" />
+      <circle cx="945" cy="246" r="5" />
+      <circle cx="975" cy="210" r="5" />
+      <circle cx="1005" cy="250" r="5" />
+    </g>
+  </g>
+</svg>
